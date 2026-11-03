@@ -1,32 +1,62 @@
-Linux project Code 
-file management system 
+
 #!/bin/bash
 
-# Create a directory
-mkdir -p FileProject
+# Create project directory
+mkdir -p fileproject
 
-# Enter the directory
-cd FileProject || exit
+# Move into project directory
+cd fileproject || exit
 
 # Create first file
 touch file1.txt
 
-# Write data into file
+# Write text into file1.txt
 echo "Hello Linux" > file1.txt
 
 # Display file contents
+echo "Contents of file1.txt:"
 cat file1.txt
 
 # Create second file
 touch file2.txt
 
-# Copy file1.txt into file3.txt
+# Display files
+echo "Files before copying:"
+ls
+
+# Copy file1.txt to file3.txt
 cp file1.txt file3.txt
 
-# Rename file2.txt
+# Move and rename file2.txt
 mv file2.txt newfile.txt
 
 # Display final files
 echo "Final Files:"
 ls -l
+
+# Remove unwanted file
+rm newfile.txt
+
+# Display files after removal
+echo "Files after removal:"
+ls -l
+
+Contents of file1.txt:
+Hello Linux
+
+Files before copying:
+file1.txt
+file2.txt
+
+Final Files:
+file1.txt
+file3.txt
+newfile.txt
+
+Files after removal:
+file1.txt
+file3.txt
+
+
+
 
